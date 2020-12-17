@@ -1,0 +1,30 @@
+import time
+
+while True:
+    username = 'DS_Intelligence'
+    password = 'SecretPassword'
+    username_input = input('Username: ')
+    password_input = input('Password: ')
+
+    if username_input == username and password_input == password:
+        print('\nAccess Granted')
+        print('Please Wait')
+        time.sleep(5)
+        print('Loading...')
+        time.sleep(1)
+        print('...')
+        time.sleep(1)
+        print('...')
+        print('\nAlright you have security clearance. Pulling up the secret mainframe.')
+        break
+
+    elif username_input == username and password_input != password:
+        print('\nIncorrect Password\nTry Again\n')
+
+    elif username_input != username and password_input == password:
+        print('\nIncorrect Username\nTry Again\n')
+
+    else:
+        print('\nYou Might Change Both Fields...')
+
+print()
